@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = “theme-color” content = “bg-slate-50”>
+    <meta name = "msapplication-navbutton-color" content = "bg-slate-50">
     <title>Ah Coisas ~ Concept Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -36,6 +38,8 @@
                     src="ah-coisas-logo.svg" 
                     alt="AH Coisas Logo" 
                     class="w-[400px] h-[400px] transition-colors duration-300 dark:invert"
+                    style="pointer-events: none; user-select: none;"
+                    draggable="false"
                 >
             </div>
 
@@ -81,6 +85,12 @@
             
             // Save preference
             localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+        });
+
+        // Block image
+        const imagem = document.querySelector('.imagem');
+        imagem.addEventListener('dragstart', (event) => {
+            event.preventDefault();
         });
     </script>
 </body>
