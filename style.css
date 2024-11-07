@@ -1,0 +1,13 @@
+/* style.css */
+.grid-background {
+    background-image: url('img/grid.svg');
+    background-position: center;
+    background-repeat: repeat;
+    opacity: 0.5;
+  }
+  
+  .dark .grid-background {
+    filter: invert(1) brightness(2);
+    opacity: 0.5;
+  }
+  
